@@ -38,6 +38,6 @@ brew update && brew outdated && brew upgrade && brew cleanup
 # bundle for common
 brew bundle
 
-exec $SHELL
-
 echo "Setup finished!"
+
+exec $SHELL
