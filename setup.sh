@@ -38,4 +38,6 @@ brew update && brew outdated && brew upgrade && brew cleanup
 # bundle for common
 brew bundle
 
+source $HOME/.profile
+
 echo "Setup finished!"
