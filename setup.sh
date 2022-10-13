@@ -56,4 +56,15 @@ if !(type docker > /dev/null 2>&1); then
     echo
 fi
 
+# install latest Ruby
+if !(type ruby > /dev/null 2>&1); then
+    LATEST_RUBY_VERSION=$(rbenv install -l | grep -v - | tail -1)
+    rbenv install $LATEST_RUBY_VERSION
+    rbenv global $LATEST_RUBY_VERSION
+    echo 'export PATH="/home/linuxbrew/.linuxbrew/bin/rbenv:$PATH"' >> $HOME/.profile
+    echo 'eval "$(rbenv init - bash)"' >> $HOME/.profile
+    . $HOME/.profile
+    echo
+fi
+
 exec $SHELL
