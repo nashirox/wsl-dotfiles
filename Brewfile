@@ -1,0 +1,5 @@
+brew 'docker'
+brew 'docker-compose'
+brew 'jq'
+brew 'tree'
+brew 'wget'
