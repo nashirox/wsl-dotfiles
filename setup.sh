@@ -57,6 +57,8 @@ fi
 if !(type ruby > /dev/null 2>&1); then
     # https://github.com/rbenv/ruby-build/wiki#ubuntudebianmint
     sudo apt install -yq autoconf bison patch build-essential rustc libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libgmp-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev uuid-dev
+    # lib for rails
+    sudo apt install -yq libpq-dev
     LATEST_RUBY_VERSION=$(rbenv install -l | grep -v - | tail -1)
     RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@3)" rbenv install $LATEST_RUBY_VERSION
     rbenv global $LATEST_RUBY_VERSION
