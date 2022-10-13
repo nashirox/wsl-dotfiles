@@ -21,7 +21,7 @@ else
     echo
 fi
 
-cd "$DOTPATH"
+cd $DOTPATH
 
 # install Homebrew
 if !(type brew > /dev/null 2>&1); then
@@ -38,6 +38,6 @@ brew update && brew outdated && brew upgrade && brew cleanup
 # bundle for common
 brew bundle
 
-echo "Setup finished!"
+cd $HOME
 
 exec $SHELL
