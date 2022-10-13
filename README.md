@@ -1,4 +1,8 @@
 # dotfiles
+
+- WSL2
+- Ubuntu 22.04
+
 ## Usage
 
 ```
