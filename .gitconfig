@@ -1,0 +1,17 @@
+[user]
+    name = Your Name
+    email = my@email.com
+[init]
+    defaultBranch = main
+[color]
+    ui = auto
+[core]
+    excludesfile = ~/.gitignore # globalな.gitignoreの指定
+    editor = vim
+[pull]
+	  ff = only # fast-forwardでマージできる状況でなければマージを行わずfetch だけに留める
+[push]
+	  default = current
+[fetch]
+    prune = true
+ 
