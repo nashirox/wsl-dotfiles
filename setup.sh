@@ -2,9 +2,9 @@
 
 set -eu
 
-sudo apt update
-sudo apt upgrade
-sudo apt install -y build-essential procps curl file git gcc zlib1g-dev
+sudo apt -qq update
+sudo apt -y upgrade
+sudo apt install -yq build-essential
 sudo apt autoremove
 
 # set dotflies
